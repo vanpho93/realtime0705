@@ -10,4 +10,9 @@
   <button class="btn btn-success" (click)="sendMessage()">
     Send Message
   </button>
+  <div>
+    <p *ngFor="let msg of messages" class="text-warning">
+      {{ msg }}
+    </p>
+  </div>
 </div>

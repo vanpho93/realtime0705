@@ -9,10 +9,13 @@ import io from 'socket.io-client';
 
 export class AppComponent {
   txtMessage = '';
+  messages: string[] = [];
   socket = io('https://realtime0705.herokuapp.com/');
 
   constructor() {
-    this.socket.on('SERVER_SEND_MESSAGE', msg => console.log(msg));
+    this.socket.on('SERVER_SEND_MESSAGE', msg => {
+      this.messages.push(`${new Date().toLocaleTimeString()}: ${msg}`);
+    });
   }
 
   sendMessage() {
