@@ -14,7 +14,8 @@ export class AppComponent {
 
   constructor() {
     this.socket.on('SERVER_SEND_MESSAGE', msg => {
-      this.messages.push(`${new Date().toLocaleTimeString()}: ${msg}`);
+      const time = new Date().toLocaleTimeString();
+      this.messages.push(`${time}: ${msg}`);
     });
   }
 
