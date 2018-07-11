@@ -3,10 +3,12 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
+import { RoundPipe } from './pipes/round.pipe';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    RoundPipe
   ],
   imports: [
     BrowserModule,
