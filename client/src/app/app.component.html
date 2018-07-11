@@ -1,0 +1,13 @@
+<div class="container" style="margin-top: 10px;">
+  <input
+    class="form-control"
+    placeholder="Enter your message"
+    style="width: 300px"
+    [(ngModel)]="txtMessage"
+    (keyUp.enter)="sendMessage();"
+  />
+  <br>
+  <button class="btn btn-success" (click)="sendMessage()">
+    Send Message
+  </button>
+</div>
